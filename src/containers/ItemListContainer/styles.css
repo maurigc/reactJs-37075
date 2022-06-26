@@ -1,3 +1,4 @@
-h1{
-    text-align: center;
+.itemCount-container{
+    display: flex;
+    justify-content: center;
 }

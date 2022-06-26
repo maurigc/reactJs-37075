@@ -1,10 +1,17 @@
 import React from "react";
+import ItemCount from "../../components/ItemCount";
 import './styles.css';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     
+    const addToCart = () => {
+        console.log("productos agregado con éxito");
+    }
+
     return(
-        <h1>{props.greeting}</h1>
+        <div className="itemCount-container">
+            <ItemCount addToCart={addToCart} stock={5} initial={1}/>
+        </div>
     )
 }
 
