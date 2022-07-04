@@ -1,21 +1,16 @@
 .container-count{
-   text-align: center;
    display: flex;
-   flex-direction: column;
+   width: 50%;
    margin: 10px;
-   padding: 0;
-   box-sizing: border-box;
-   background: rgba(251, 251, 251, 0.339);
-   border-radius: 10px;
    padding: 10px;
-   box-shadow:  1px 1px 3px rgba(0, 0, 0, .1),3px 3px 6px rgba(0, 0, 0, .1), 5px 5px 10px rgba(0, 0, 0, .1), inset 2px 2px 5px rgba(0, 0, 0, .3) ;
 }
 
 .container-btn-count{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+    width: 200px;
+    margin-right: 50px;
 }
 
 
@@ -34,8 +29,17 @@
    font-size: 30px;
 }
 
-.tittle-count{
-    font-size: 15px;
-    color: #99A8B2;
-    text-align: left;
+.addToCart-button{
+    border-radius: 20px;
+    border: none;
+    background-color: #212121;
+    color: #EEEEEE;
+    width: 200px;
+    transition: .5s;
+}
+
+.addToCart-button:hover{
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3),3px 3px 6px rgba(0, 0, 0, .3), 5px 5px 10px rgba(0, 0, 0, .3);
+    color: #d0d0d0;
+    
 }

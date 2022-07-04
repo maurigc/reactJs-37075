@@ -5,6 +5,8 @@ import ItemCount from "../../components/ItemCount";
 import ItemList from "../../components/ItemList/index.jsx";
 import './styles.css';
 
+
+
 const ItemListContainer = () => {
     
     const [products, setProducts] = useState(null);
@@ -27,10 +29,7 @@ const ItemListContainer = () => {
 
     }, [])
 
-    // // Function to add products
-    // const addToCart = (countProducts) => {
-    //     countProducts === 1 ? alert("Se agrego 1 producto al carrito") : alert(`${countProducts} productos se agregaron al carrito`);
-    // }
+    
 
     return(
         // <div className="itemCount-container"> 

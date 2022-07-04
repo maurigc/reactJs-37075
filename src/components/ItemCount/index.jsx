@@ -12,10 +12,9 @@ const ItemCount = ({stock, initial, addToCart}) => {
 
     return(
         <div className="container-count">
-            <h3 className="tittle-count">Cantidad de productos:</h3>
             <div className="container-btn-count">
                 <button onClick={() => addProducts(-1)} className="btn-count" disabled={countProducts === initial ? true : null}>-</button>
-                <p className="p-count">{countProducts}</p>
+                <span className="p-count">{countProducts}</span>
                 <button onClick={() => addProducts(1)} className="btn-count" disabled={countProducts === stock ? true : null}>+</button>
             </div>
             <button onClick={() =>addToCart(countProducts)} className="addToCart-button">Agregar al carrito</button>

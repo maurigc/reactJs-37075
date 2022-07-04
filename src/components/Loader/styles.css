@@ -1,0 +1,33 @@
+.loader{
+    animation-name: loader;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    width: 64px;
+    height: 64px;
+    
+}
+
+@keyframes loader {
+    0%{
+        filter: invert(52%) sepia(90%) saturate(350%) hue-rotate(132deg) brightness(93%) contrast(87%);
+    }
+    50%{
+        transform: rotate(180deg);
+        filter: invert(67%) sepia(26%) saturate(679%) hue-rotate(112deg) brightness(93%) contrast(103%);
+    }
+    100%{
+        transform: rotate(360deg);
+        filter: invert(52%) sepia(90%) saturate(350%) hue-rotate(132deg) brightness(93%) contrast(87%);
+    }
+}
+
+.container-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+        
+}
