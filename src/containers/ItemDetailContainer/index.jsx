@@ -31,15 +31,12 @@ const ItemDetailContainer = () => {
         getProducts();
     }, [params])
 
-    // Function to add products
-    const addToCart = (countProducts) => {
-        countProducts === 1 ? alert("Se agrego 1 producto al carrito") : alert(`${countProducts} productos se agregaron al carrito`);
-    }
+    
 
     return(
         <div>
             {/* Si el producto no esta seteado se monta un loader */}
-            {productDetail ? <ItemDetail product={productDetail} addToCart={addToCart}/> : <Loader/>}
+            {productDetail ? <ItemDetail product={productDetail}/> : <Loader/>}
         </div>
     )
 }

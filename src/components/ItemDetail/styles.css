@@ -32,7 +32,30 @@
     font-family: sans-serif;
 }
 
+.description-product h1{
+    width: 900px;
+}
+
 .description-product p {
     width: 700px;
 }
 
+
+.btn-terminate{
+    width: 200px;
+    align-self: center;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #EEEEEE;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-terminate:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    color: #51C4A3;
+}
