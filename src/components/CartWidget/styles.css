@@ -19,3 +19,22 @@
         transform: translateX(0px);
     }
 }
+
+.numbreItem{
+    background-color: #99A8B2 transparent;
+    color: #EEEEEE;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    font-weight: bolder;
+    padding: 0px 1px 1px 0px;
+    font-size: 10px;
+    position: relative;
+    right: 16px;
+    bottom: 4px;
+
+}
+
+.container-cart{
+    display: flex;
+}

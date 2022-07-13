@@ -2,7 +2,7 @@ import React from "react";
 import Input from '../Input';
 import CartWidget from "../CartWidget";
 import './styles.css';
-import logo from '../assets/img/logo_64.png';
+import logo from '../../assets/img/logo_64.png';
 import { useNavigate, Link } from "react-router-dom";
 
 

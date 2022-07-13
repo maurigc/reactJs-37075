@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import searchLogo from "../assets/img/search_16.png";
+import searchLogo from "../../assets/img/search_16.png";
 
 const Input = () => {
     return(

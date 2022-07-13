@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Load from "../assets/img/loading_64.png";
+import Load from "../../assets/img/loading_64.png";
 
 const Loader = () => {
 

@@ -1,0 +1,43 @@
+.products-cart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50vw;
+}
+
+.products-cart h3{
+    text-align: left;
+    width: 300px;
+}
+
+.products-cart p{
+    text-align: center;
+    width: 50px;
+}
+
+.img-delete{
+    cursor: pointer;
+}
+
+.img-delete:hover{
+    filter: invert(40%) sepia(58%) saturate(1286%) hue-rotate(326deg) brightness(92%) contrast(100%);
+}
+
+.btn-clearAll{
+    width: 200px;
+    align-self: center;
+    margin: 10px 18%;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #EEEEEE;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btn-clearAll:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    color: #51C4A3;
+}

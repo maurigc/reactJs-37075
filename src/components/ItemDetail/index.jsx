@@ -1,6 +1,8 @@
 import React from "react";
+import { useContext } from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
+import { Shop } from "../../context/ShopContext";
 import ItemCount from "../ItemCount";
 import "./styles.css";
 
@@ -8,17 +10,22 @@ import "./styles.css";
 
 const ItemDetail = ({product}) => {
 
+    // Estado para guardar la cantidad de productos agregados
     const [qtyProductsAdded, setQtyProductsAdded] = useState(0);
 
     const navigate = useNavigate();
 
+    // Usamos la funcion addProducts del contexto
+    const {addProducts} = useContext(Shop);
+
     // Function to add products
     const addToCart = (qty) => {
-        // countProducts === 1 ? alert("Se agrego 1 producto al carrito") : alert(`${countProducts} productos se agregaron al carrito`);
         setQtyProductsAdded(qty);
     }
 
+    // Funcion para terminar la compra y navegar al cart
     const handleTerminate = () => {
+        addProducts(product, qtyProductsAdded);
         navigate("/cart");
     }
 
@@ -34,7 +41,7 @@ const ItemDetail = ({product}) => {
                         <ItemCount addToCart={addToCart} stock={5} initial={1}/>
                     </div>
                     :
-                    <button className="btn-terminate" onClick={() => handleTerminate()}>Terminar compra</button>}
+                    <button className="btn-terminate" onClick={handleTerminate}>Terminar compra</button>}
             </div>
         </div>
     )
