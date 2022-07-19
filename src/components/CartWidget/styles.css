@@ -1,3 +1,7 @@
+.img-cart-nav{
+    cursor: pointer;
+}
+
 .img-cart-nav:hover{
    animation: cartMoving .5s infinite;
 }

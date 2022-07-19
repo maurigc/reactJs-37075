@@ -16,7 +16,7 @@ const ItemDetail = ({product}) => {
     const navigate = useNavigate();
 
     // Usamos la funcion addProducts del contexto
-    const {addProducts} = useContext(Shop);
+    const {addProducts, total} = useContext(Shop);
 
     // Function to add products
     const addToCart = (qty) => {
@@ -26,22 +26,25 @@ const ItemDetail = ({product}) => {
     // Funcion para terminar la compra y navegar al cart
     const handleTerminate = () => {
         addProducts(product, qtyProductsAdded);
+        total(product,qtyProductsAdded);
         navigate("/cart");
     }
 
     return (
-        <div className="container-detail">
-            <img className="img-product" alt="img product" src={product.image}/>
-            <div className="description-product">
-                <h1>{product.title}</h1>
-                <p>{product.description}</p>
-                <h2>${product.price}</h2>
-                {!qtyProductsAdded ? 
-                    <div className="itemCount-container">
-                        <ItemCount addToCart={addToCart} stock={5} initial={1}/>
-                    </div>
-                    :
-                    <button className="btn-terminate" onClick={handleTerminate}>Terminar compra</button>}
+        <div className="contenedorDePrueba">
+            <div className="container-detail">
+                <img className="img-product" alt="img product" src={product.image}/>
+                <div className="description-product">
+                    <h1>{product.title}</h1>
+                    <p>{product.description}</p>
+                    <h2>${product.price}</h2>
+                    {!qtyProductsAdded ? 
+                        <div className="itemCount-container">
+                            <ItemCount addToCart={addToCart} stock={5} initial={1}/>
+                        </div>
+                        :
+                        <button className="btn-terminate" onClick={handleTerminate}>Terminar compra</button>}
+                </div>
             </div>
         </div>
     )

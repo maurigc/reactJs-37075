@@ -1,0 +1,29 @@
+.emptyCart{
+    text-align: center;
+
+}
+
+.emptyCart-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.btn-backToMain{
+    padding: 10px 20px;
+    background: linear-gradient(to top, #2CACAE, #51C4A3);
+    border: none;
+    outline: none;
+    color: #d7d7d7;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.btn-backToMain:hover{
+    color:  #EEEEEE;
+    box-shadow: 1px 1px 5px #212121;
+}

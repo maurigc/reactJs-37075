@@ -9,15 +9,17 @@ import ShopProvider from './context/ShopContext';
 function App() {
   return (
     <ShopProvider>
-      <BrowserRouter>
-          <NavBar/>
-          <Routes>
-            <Route path='/' element={<ItemListContainer greeting="hello coder"/>}></Route>
-            <Route path='/category/:categoryId' element={<ItemListContainer greeting="hello coder"/>}></Route>
-            <Route path='/detail/:detailId' element={<ItemDetailContainer/>}></Route>
-            <Route path='/cart' element={<Cart/>}></Route>
-          </Routes>
-      </BrowserRouter>
+      <div className='app'>
+        <BrowserRouter>
+            <NavBar/>
+            <Routes>
+              <Route path='/' element={<ItemListContainer greeting="hello coder"/>}></Route>
+              <Route path='/category/:categoryId' element={<ItemListContainer greeting="hello coder"/>}></Route>
+              <Route path='/detail/:detailId' element={<ItemDetailContainer/>}></Route>
+              <Route path='/cart' element={<Cart/>}></Route>
+            </Routes>
+        </BrowserRouter>
+      </div>
     </ShopProvider>  
   );  
 }

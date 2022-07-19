@@ -3,25 +3,44 @@ import { useContext } from "react";
 import { Shop } from "../../context/ShopContext";
 import "./styles.css";
 import deleteLogo from "../../assets/img/deleteIcon_32.png"
+import { useNavigate } from "react-router-dom";
+import EmptyCart from "../../components/EmptyCart";
 
 const Cart = () => {
 
-    const {cart, removeAll, removeItem} = useContext(Shop);
+    const {cart, removeAll, removeItem, totalCompra} = useContext(Shop);
 
+    const navigate = useNavigate();
+
+    const goToMain = () => {
+        navigate("/");
+    }
 
     return(
-        <div>
-            {cart.map((producto) => {
-                return (
-                    <div className="products-cart">
-                        <h3>{producto.title}</h3>
-                        <p>{producto.quantity}</p>
-                        <p>{producto.price}</p>
-                        <img className="img-delete" onClick={() => removeItem(producto.id)} src={deleteLogo} alt="img-delete"></img>
-                    </div>
-                )
-            })}
-            {cart.length !== 0 ? <button className="btn-clearAll" onClick={() => removeAll()}>Eliminar productos</button> : <h1>carrito vacio</h1>}
+        <div className="mainCart-container">
+        {cart.length !== 0 ?
+            <div className="cart-container">
+                {cart.map((producto) => {
+                    return (
+                        <div className="products-cart">
+                            <img className="img-cart" alt="img-cart" src={producto.image}></img>
+                            <h3>{producto.title}</h3>
+                            <p>{producto.quantity}</p>
+                            <p>${producto.price}</p>
+                            <img className="img-delete" onClick={() => removeItem(producto.id, producto.price, producto.quantity)} src={deleteLogo} alt="img-delete"></img>
+                        </div>
+                    )
+                })}
+                <h1 className="total-cart">Total: ${totalCompra}</h1>
+                <div className="btnCart-container">
+                    <button className="btn-clearAll" onClick={() => removeAll()}>Eliminar productos</button>
+                    <button className="btn-finalizarCompra">Finalizar la compra</button>
+                </div>
+                     
+            </div>
+            :
+            <EmptyCart goToMain={goToMain}/>
+        }
         </div>
     )
 }
