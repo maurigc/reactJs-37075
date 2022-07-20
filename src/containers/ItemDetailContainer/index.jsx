@@ -5,6 +5,8 @@ import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail";
 import "./styles.css";
 import Loader from "../../components/Loader";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 
 const ItemDetailContainer = () => {
@@ -18,11 +20,19 @@ const ItemDetailContainer = () => {
 
         const getProducts = async () => {
             try {
-                const response = await fetch(`https://fakestoreapi.com/products/${params.detailId}`);
-            
-                const data = await response.json();
+                const docRef = doc(db, "products", params.detailId);
+                const docSnap = await getDoc(docRef);
 
-                setProductDetail(data);
+                if (docSnap.exists()) {
+                    const productDetail = {id: docSnap.id, ...docSnap.data()}
+
+                    setProductDetail(productDetail);
+
+                } else {
+                
+                console.log("No such document!");
+                }
+
             } catch (error) {
                 alert(error);
             }
