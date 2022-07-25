@@ -21,6 +21,9 @@ const Item = ({product}) => {
                 <button className="btn-product" onClick={handleDetail}>More details</button>
             </div>
             
+            <p className="stock"><strong>Stock:</strong> {product.stock}</p>
+            
+            
         </div>
     )
 }

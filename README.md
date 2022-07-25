@@ -16,6 +16,9 @@
 - [CSS] - para el estilo de la página
 - [node.js] - para instalar las dependencias y librerias.
 
+## Librerias
+
+- [SweetAlert] - Para la generación de Toasts.
 
 ## Dependencias.
 

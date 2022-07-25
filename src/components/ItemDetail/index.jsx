@@ -40,7 +40,7 @@ const ItemDetail = ({product}) => {
                     <h2>${product.price}</h2>
                     {!qtyProductsAdded ? 
                         <div className="itemCount-container">
-                            <ItemCount addToCart={addToCart} stock={5} initial={1}/>
+                            <ItemCount addToCart={addToCart} stock={product.stock} initial={1}/>
                         </div>
                         :
                         <button className="btn-terminate" onClick={handleTerminate}>Terminar compra</button>}
