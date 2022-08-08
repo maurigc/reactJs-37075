@@ -41,7 +41,6 @@ const ItemDetailContainer = () => {
         getProducts();
     }, [params])
 
-    
 
     return(
         <div>

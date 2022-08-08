@@ -1,6 +1,8 @@
 # FIRESTORE App
 ## _E-commerce_
 
+![](/coder_house_37075/src/assets/img/gifFireApp.gif)
+
 ## Caracteristicas
 
 - Aplicación SPA de E-commerce.

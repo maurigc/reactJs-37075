@@ -5,6 +5,7 @@
     background-color: #212121;
     position: sticky;
     top: 0px;
+    z-index: 99;
 }
 
 .img-logo{
@@ -29,18 +30,20 @@
     font-weight: 500;   
     padding: 5px;
     margin: 0px 15px;
+    transition: .3s;
+}
+
+.item-nav:hover{
+    border-top: 2px solid #0D7377;
+    color: #EEEEEE;
 }
 
 a{
     text-decoration: none;
-    color: #99A8B2;
-    transition: .3s;
+    color: #99A8B2; 
 }
 
-a:hover{
-    border-top: 2px solid #0D7377;
-    color: #EEEEEE;
-}
+
 
 .cart-nav{
     align-self: center;

@@ -1,0 +1,99 @@
+.container-form{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px; 
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to top, #2CACAE, #51C4A3);
+    width: 500px;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #99A8B2, 6px 6px 20px #99A8B2;
+}
+
+.tituloForm{
+    color: #EEEEEE;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border-bottom: 2px solid #212121;
+}
+
+.inputForm{
+    margin: 10px 10px;
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    transition: .5s;
+}
+
+.inputForm:focus{
+    width: 305px;
+    height: 52px;
+    
+    box-shadow: 1px 1px 5px #212121;
+}
+
+
+.imagenProducto{
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    border: 2px solid #99A8B2;
+}
+
+.container-buyProducts{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 50px;
+    padding: 10px 0px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, .3);
+}
+
+.finalizarCompra{
+    width: 200px;
+    align-self: center;
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: #212121;
+    color: #EEEEEE;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.finalizarCompra:hover{
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+    color: #51C4A3;
+}
+
+
+
+.error{
+    border: 2px solid red;
+    background-color: #df9999;
+}
+
+.error-p{
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    
+}

@@ -8,6 +8,27 @@ const generarOrden = (cart, order) => {
 
     const outOfStock = [];
 
+    if(outOfStock.length === 0 ) {
+        addDoc(collection(db, "orders"), order)
+        .then(({id}) => {
+            batch.commit().then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    toast: true,
+                    title: 'Tu compra se realizó con éxito.',
+                    html: `<strong>Código compra:</strong> ${id}`,
+                    showConfirmButton: false,
+                    position: 'top-end',
+                    timer: '3000'
+                  })
+            })
+        }).catch((err) => {
+            alert(err);
+        })
+    }else{
+        alert("error");
+    }
+
     cart.forEach( (productoEnCart) => {
         getDoc(doc(db, "products", productoEnCart.id))
         .then( async (docSnap) => {
@@ -20,30 +41,9 @@ const generarOrden = (cart, order) => {
             }else{
                 outOfStock.push(producto);
             }
-
-            if(outOfStock.length === 0 ) {
-                addDoc(collection(db, "orders"), order)
-                .then(({id}) => {
-                    batch.commit().then(() => {
-                        Swal.fire({
-                            icon: 'success',
-                            toast: true,
-                            title: 'Tu compra se realizó con éxito.',
-                            html: `<strong>Código compra:</strong> ${id}`,
-                            showConfirmButton: false,
-                            position: 'top-end',
-                            timer: '3000'
-                          })
-                    })
-                }).catch((err) => {
-                    alert(err);
-                })
-            }else{
-                alert("error");
-            }
            
         })
-            
+        
         
     });
 }

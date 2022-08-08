@@ -7,10 +7,14 @@ import './styles.css';
 import { useParams } from "react-router-dom";
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from "../../firebase/config.js"
+import { useContext } from "react";
+import { Shop } from "../../context/ShopContext.jsx";
 
 
 
-const ItemListContainer = () => {
+const ItemListContainer = () => {    
+
+    const {setTodosProductos} = useContext(Shop);
     
     const [products, setProducts] = useState(null);
 
@@ -30,7 +34,8 @@ const ItemListContainer = () => {
                 });
                 
                 params.categoryId ? setProducts(allProducts.filter(product => product.category === params.categoryId)) : setProducts(allProducts);
-            
+                
+                setTodosProductos(allProducts);
             } catch (err){
                 console.log(`Error: ${err}`);
             }

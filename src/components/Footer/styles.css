@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 10px;
+    background-color:  #8e8e8e;
+}
+
+.containerImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerInfo h3{
+    color: #EEEE;
+}

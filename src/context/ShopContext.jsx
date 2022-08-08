@@ -6,6 +6,8 @@ export const Shop = createContext();
 
 const ShopProvider = ({children}) => {
 
+    const [todosProductos, setTodosProductos] = useState([]);
+
     // Estado para guardar los productos agregados
     const [cart, setCart] = useState([]);
 
@@ -59,7 +61,7 @@ const ShopProvider = ({children}) => {
     }
 
     return(
-        <Shop.Provider value={{addProducts, cart, removeAll, removeItem, total, totalCompra}}>
+        <Shop.Provider value={{addProducts, cart, removeAll, removeItem, total, totalCompra, todosProductos, setTodosProductos}}>
             {children}
         </Shop.Provider>    
     )
