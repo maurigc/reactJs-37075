@@ -3,6 +3,8 @@
 
 ![no anda](/coder_house_37075/src/assets/img/gifFireApp.gif | width=40)
 
+<img src="/coder_house_37075/src/assets/img/gifFireApp.gif" width=40px height=40px />
+
 ## Caracteristicas
 
 - Aplicación SPA de E-commerce.
