@@ -1,7 +1,7 @@
 # FIRESTORE App
 ## _E-commerce_
 
-<img src="/src/assets/img/gifFireApp.gif" width=200px height=100px />
+<img src="/src/assets/img/gifFireApp.gif" width=300px height=300px />
 
 ## Caracteristicas
 
