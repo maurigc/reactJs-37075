@@ -1,9 +1,9 @@
 # FIRESTORE App
 ## _E-commerce_
 
-![no anda](/coder_house_37075/src/assets/img/gifFireApp.gif | width=40)
+![no](/src/assets/img/gifFireApp.gif | width=40)
 
-<img src="/coder_house_37075/src/assets/img/gifFireApp.gif" width=40px height=40px />
+<img src="/src/assets/img/gifFireApp.gif" width=40px height=40px />
 
 ## Caracteristicas
 
