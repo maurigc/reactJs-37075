@@ -12,9 +12,9 @@ const Footer = () => {
                     <img src={Logo} alt="logo-footer"></img>
                 </div>
                 <div className="containerLinks">
-                    <h3>Contáctanos</h3>
-                    <h3>Nosotros</h3>
-                    <h3>Productos</h3>
+                    <h3 className="links">Contáctanos</h3>
+                    <h3 className="links">Nosotros</h3>
+                    <h3 className="links">Productos</h3>
                 </div>
                 <div className="containerInfo">
                     <h3>Atencion al cliente</h3>

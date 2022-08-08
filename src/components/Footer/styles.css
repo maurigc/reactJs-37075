@@ -17,6 +17,14 @@
     justify-content: space-between;
 }
 
+.links{
+    cursor: pointer;
+}
+
+.links:hover{
+    color: #0D7377;
+}
+
 .containerInfo h3{
     color: #EEEE;
 }
