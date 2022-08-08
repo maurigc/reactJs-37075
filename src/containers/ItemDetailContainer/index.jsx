@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
                 }
 
             } catch (error) {
-                alert(error);
+                alert(`Error: ${error}`);
             }
         }
 

@@ -37,7 +37,7 @@ const ItemListContainer = () => {
                 
                 setTodosProductos(allProducts);
             } catch (err){
-                console.log(`Error: ${err}`);
+                alert(`Error: ${err}`);
             }
             
         }
